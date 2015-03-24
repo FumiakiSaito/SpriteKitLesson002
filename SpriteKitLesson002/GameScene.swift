@@ -35,6 +35,9 @@ class GameScene: SKScene {
             
             // タップされた座標へ0.5秒で移動するアクション
             let action = SKAction.moveTo(location, duration: 0.5)
+            
+            // イーズアウトで動作するように
+            action.timingMode = SKActionTimingMode.EaseOut
   
             // アクションを実行
             mySprite.runAction(action)
